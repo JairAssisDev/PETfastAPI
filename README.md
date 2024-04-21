@@ -13,3 +13,7 @@ alembic revision upgrade head
 alembic upgrade head
 
 uvicorn app.main:app --reload
+
+docker build -t apipet .
+
+docker run -d -p 8000:8000 apipet
